@@ -1,0 +1,11 @@
+vcpkg_from_github(
+    OUT_SOURCE_PATH SOURCE_PATH
+    REPO JustasMasiulis/xorstr
+    REF 7cd289998f4da2c8bc2362befb3090b851f2490a # 2026-11-08
+    SHA512 a0016fa1f1d6306826afa1e5ef68dd59e2b65239592a5869e0f9a28e3e78d45d89241896cd48071236d4555cd2fe2c95ec8f4943047beef0a9d3002b4e59601f
+    HEAD_REF master
+)
+
+file(COPY "${SOURCE_PATH}/include/xorstr.hpp" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
+
+vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")

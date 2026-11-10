@@ -1,0 +1,36 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9f116a4..b4a033d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -414,12 +414,13 @@ ENDIF(NC_HAS_DEF_VAR_FILTER)
+ ###
+ # Find HDF5
+ ###
+-IF(MSVC)
+-  SET(SEARCH_PACKAGE_NAME ${HDF5_PACKAGE_NAME})
+-  FIND_PACKAGE(HDF5 NAMES ${SEARCH_PACKAGE_NAME} COMPONENTS C HL NO_MODULES REQUIRED ${NC_HDF5_LINK_TYPE})
+-ELSE(MSVC)
+-  FIND_PACKAGE(HDF5 COMPONENTS C HL REQUIRED)
+-ENDIF(MSVC)
++FIND_PACKAGE(hdf5 CONFIG REQUIRED)
++SET(HDF5_FOUND ${hdf5_FOUND})
++IF(NOT HDF5_USE_STATIC_LIBRARIES)
++  set(HDF5_C_LIBRARY_hdf5 hdf5::hdf5-shared hdf5::hdf5_hl-shared)
++ELSE()
++  set(HDF5_C_LIBRARY_hdf5 hdf5::hdf5-static hdf5::hdf5_hl-static)
++ENDIF()
+ 
+ ################################
+ # End 'seek out dependent libraries'
+diff --git a/cxx4/CMakeLists.txt b/cxx4/CMakeLists.txt
+index 16e3afd..535cf44 100644
+--- a/cxx4/CMakeLists.txt
++++ b/cxx4/CMakeLists.txt
+@@ -95,7 +95,6 @@ TARGET_INCLUDE_DIRECTORIES(netcdf-cxx4 PUBLIC
+   )
+ TARGET_LINK_LIBRARIES(netcdf-cxx4 PUBLIC netCDF::netcdf)
+ TARGET_LINK_LIBRARIES(netcdf-cxx4 PUBLIC ${ALL_TLL_LIBS})
+-target_include_directories(netcdf-cxx4 SYSTEM PUBLIC "${HDF5_INCLUDE_DIRS}")
+ 
+ SET_TARGET_PROPERTIES(netcdf-cxx4 PROPERTIES
+   VERSION ${NCXX_LIB_VERSION}

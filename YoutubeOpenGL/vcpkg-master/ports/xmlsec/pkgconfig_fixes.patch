@@ -1,0 +1,12 @@
+diff --git a/xmlsec.pc.in b/xmlsec.pc.in
+index 040e7c9b..e84eb163 100644
+--- a/xmlsec.pc.in
++++ b/xmlsec.pc.in
+@@ -7,6 +7,6 @@ Name: xmlsec1
+ Version: @VERSION@
+ Description: XML Security Library implements XML Signature and XML Encryption standards
+ Requires: @LIBXML_PC_FILE_COND@ @LIBXSLT_PC_FILE_COND@
+-Cflags: -DXMLSEC_CRYPTO_DYNAMIC_LOADING=1 @XMLSEC_CORE_CFLAGS@
++Cflags: @XMLSEC_CORE_CFLAGS@
+ Cflags.private: -DXMLSEC_STATIC
+ Libs: -L${libdir} @XMLSEC_CORE_LIBS@
