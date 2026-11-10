@@ -7,13 +7,13 @@
 
 // Clases del proyecto
 #include "Camera.h"
-#include "Character.h"
+
 
 class Renderer {
 
 private:
 
-    // Cámara principal
+    // CÃ¡mara principal
     Camera camera;
 
     // Personaje
