@@ -1,0 +1,38 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"projectIndex" : 0,
+					"source" : "."
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project"
+				}
+			],
+			"targets" : []
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/cpp-redis/tacopie/out/build/x64-Debug",
+		"source" : "C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/cpp-redis/tacopie"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

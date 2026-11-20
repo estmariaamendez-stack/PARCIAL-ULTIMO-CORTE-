@@ -1,0 +1,9 @@
+prefix=C:/Users/JUAN URREGO/Source/Repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/libaio/out/install/x64-Debug
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libaio
+Description: The Linux-native asynchronous I/O facility
+Version: 
+Cflags: -I${includedir}
+Libs: -L${libdir} -laio

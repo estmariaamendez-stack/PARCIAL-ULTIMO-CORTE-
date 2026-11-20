@@ -1,0 +1,43 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "variant-library"
+				}
+			],
+			"targets" : []
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/mapbox-variant/out/build/x64-Debug",
+		"source" : "C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/mapbox-variant"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

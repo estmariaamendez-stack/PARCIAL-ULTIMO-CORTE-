@@ -1,0 +1,6 @@
+C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/fastfeat/out/build/x64-Debug/CMakeFiles/fastfeat.dir
+C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/fastfeat/out/build/x64-Debug/CMakeFiles/install/local.dir
+C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/fastfeat/out/build/x64-Debug/CMakeFiles/install.dir
+C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/fastfeat/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/fastfeat/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/JUAN URREGO/source/repos/PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/vcpkg-master/ports/fastfeat/out/build/x64-Debug/CMakeFiles/list_install_components.dir
