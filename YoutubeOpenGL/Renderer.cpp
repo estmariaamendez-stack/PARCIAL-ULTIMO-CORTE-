@@ -19,7 +19,6 @@
 // TINYGLTF 2.x
 #define TINYGLTF_NO_STB_IMAGE
 #define TINYGLTF_NO_STB_IMAGE_WRITE
-#define TINYGLTF_IMPLEMENTATION
 #include "legacy_gltf/tiny_gltf.h"
 
 // =====================================
@@ -309,6 +308,7 @@ static void dibujarMalla(
                 continue;
         }
 
+        // Determinar el modo de dibujo
         GLenum modo = GL_TRIANGLES;
 
         switch (primitive.mode)
@@ -325,7 +325,7 @@ static void dibujarMalla(
             modo = GL_TRIANGLE_FAN;
             break;
 
-        case TINYGLTF_MODE_LINES:
+        case 1:
             modo = GL_LINES;
             break;
 
@@ -452,15 +452,15 @@ static void dibujarNodo(
 
                 double angulo =
                     2.0 * std::acos(
-                        std::max(
+                        (std::max)(
                             -1.0,
-                            std::min(1.0, qw)
-                        )
+                            (std::min)(1.0, qw)
+                            )
                     );
 
                 double seno =
                     std::sqrt(
-                        std::max(0.0, 1.0 - qw * qw)
+                        (std::max)(0.0, 1.0 - qw * qw)
                     );
 
                 if (seno > 0.000001)
@@ -532,6 +532,7 @@ static void dibujarModeloGLTF()
     }
 }
 
+
 // =====================================
 // CURVA BEZIER
 // =====================================
@@ -545,18 +546,18 @@ static void calcularBezier(
     float u = 1.0f - t;
 
     x =
-        u * u * u * (-8.0f) +
-        3.0f * u * u * t * (-4.0f) +
-        3.0f * u * t * t * (4.0f) +
-        t * t * t * (8.0f);
+        u * u * u * (-2.0f) +
+        3.0f * u * u * t * (-1.0f) +
+        3.0f * u * t * t * (1.0f) +
+        t * t * t * (2.0f);
 
     y = 0.0f;
 
     z =
-        u * u * u * (-5.0f) +
-        3.0f * u * u * t * (8.0f) +
-        3.0f * u * t * t * (-8.0f) +
-        t * t * t * (5.0f);
+        u * u * u * (-1.25f) +
+        3.0f * u * u * t * (2.0f) +
+        3.0f * u * t * t * (-2.0f) +
+        t * t * t * (1.25f);
 }
 
 static void drawBezierCurve()
@@ -656,8 +657,9 @@ void Renderer::init(int width, int height)
 
     // RUTA DE TU MODELO
     cargarTaza(
-        "C:/Users/JUAN URREGO/Downloads/"
-        "marble_teapot/scene.gltf"
+        "C:/Users/janus/source/repos/"
+        "PARCIAL-ULTIMO-CORTE-/YoutubeOpenGL/"
+        "Models/scene.gltf"
     );
 
     lastTime = (float)glfwGetTime();
@@ -747,7 +749,7 @@ void Renderer::display()
     );
 
     glScalef(
-        0.5f, 0.5f, 0.5f
+        1.0f, 1.0f, 1.0f
     );
 
     dibujarModeloGLTF();
